@@ -11,7 +11,7 @@ const defaultProps = {
 function Layouts(propsIn: Props) {
   const props = { ...defaultProps, ...propsIn };
   return (
-    <div className="bg-gray-50 text-gray-700 dark:bg-gray-900 dark:text-gray-300 shadow-lg max-w-tablet mx-auto h-screen w-full">
+    <div className="bg-light-primary text-light-primary-text dark:bg-dark-primary dark:text-dark-primary-text shadow-lg max-w-tablet mx-auto h-screen w-full">
       {props.children}
     </div>
   );

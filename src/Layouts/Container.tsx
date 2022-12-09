@@ -14,7 +14,7 @@ function Container(propsIn: Props) {
   const props = { ...defaultProps, ...propsIn };
   return (
     <div
-      className={` bg-gray-50 text-gray-700 dark:bg-gray-900 dark:text-gray-300 w-full max-w-tablet ${
+      className={`bg-light-primary text-light-primary-text dark:bg-dark-primary dark:text-dark-primary-text w-full max-w-tablet ${
         props.padding
       } ${props.fixed ? "fixed z-50" : ""}  ${
         props.fixedBottom

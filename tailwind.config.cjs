@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  darkMode: "media",
+  darkMode: "class",
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
@@ -12,6 +12,21 @@ module.exports = {
       },
       screens: {
         tablet: "768px",
+      },
+      colors: {
+        dark: {
+          primary: "#15202B",
+          secondary: "#192734",
+          accent: "#22303C",
+          "primary-text": "#F9FAFB",
+          "secondary-text": "#8899A6",
+        },
+        light: {
+          primary: "#F9FAFB",
+          secondary: "#64748b",
+          "primary-text": "#111827",
+          "secondary-text": "#374151",
+        },
       },
     },
   },
