@@ -10,7 +10,7 @@ function Navbar(propsIn: Props) {
   return (
     <>
       <div className="flex justify-between items-center w-full max-w-tablet">
-        <div className="text-base">Brands</div>
+        <div className="text-base font-semibold">KBNU Rancaekek</div>
         <div className="text-base">Icon</div>
       </div>
       <div className="hidden w-full py-4">
