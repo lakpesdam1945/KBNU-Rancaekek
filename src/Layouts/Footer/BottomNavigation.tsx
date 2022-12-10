@@ -16,8 +16,8 @@ function BottomNavigation({}: Props) {
         to="/"
         className={({ isActive }) =>
           isActive
-            ? "text-dark-primary dark:text-light-secondary"
-            : "text-light-secondary dark:text-dark-secondary-text"
+            ? "text-dark-primary dark:text-light-primary"
+            : "text-light-secondary-text dark:text-dark-secondary-text"
         }
       >
         <IoHomeSharp className="h-6 w-6" />
@@ -26,8 +26,8 @@ function BottomNavigation({}: Props) {
         to="/search"
         className={({ isActive }) =>
           isActive
-            ? "text-dark-primary dark:text-light-secondary"
-            : "text-light-secondary dark:text-dark-secondary-text"
+            ? "text-dark-primary dark:text-light-primary"
+            : "text-light-secondary-text dark:text-dark-secondary-text"
         }
       >
         <IoSearchSharp className="h-6 w-6" />
@@ -36,8 +36,8 @@ function BottomNavigation({}: Props) {
         to="/post"
         className={({ isActive }) =>
           isActive
-            ? "text-dark-primary dark:text-light-secondary"
-            : "text-light-secondary dark:text-dark-secondary-text"
+            ? "text-dark-primary dark:text-light-primary"
+            : "text-light-secondary-text dark:text-dark-secondary-text"
         }
       >
         <IoBookSharp className="h-6 w-6" />
@@ -46,8 +46,8 @@ function BottomNavigation({}: Props) {
         to="/shop"
         className={({ isActive }) =>
           isActive
-            ? "text-dark-primary dark:text-light-secondary"
-            : "text-light-secondary dark:text-dark-secondary-text"
+            ? "text-dark-primary dark:text-light-primary"
+            : "text-light-secondary-text dark:text-dark-secondary-text"
         }
       >
         <IoBagSharp className="h-6 w-6" />
@@ -56,8 +56,8 @@ function BottomNavigation({}: Props) {
         to="/user"
         className={({ isActive }) =>
           isActive
-            ? "text-dark-primary dark:text-light-secondary"
-            : "text-light-secondary dark:text-dark-secondary-text"
+            ? "text-dark-primary dark:text-light-primary"
+            : "text-light-secondary-text dark:text-dark-secondary-text"
         }
       >
         <IoPersonSharp className="h-6 w-6" />

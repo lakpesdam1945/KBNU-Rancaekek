@@ -23,9 +23,10 @@ module.exports = {
         },
         light: {
           primary: "#F9FAFB",
-          secondary: "#64748b",
+          secondary: "#475569",
+          accent: "#D4D4D4",
           "primary-text": "#111827",
-          "secondary-text": "#374151",
+          "secondary-text": "#64748B",
         },
       },
     },

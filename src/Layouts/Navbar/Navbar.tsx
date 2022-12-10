@@ -1,4 +1,4 @@
-import { useState } from "react";
+import react, { useState, useReducer } from "react";
 import { IoMoonSharp, IoOptionsSharp, IoSunnySharp } from "react-icons/io5";
 import { NavLink } from "react-router-dom";
 import NavbarBrands from "./NavbarBrands";
@@ -35,16 +35,30 @@ const data = [
     link: "Agenda",
   },
 ];
+const initialState = { showMenu: false };
+type ShowMenuState = {
+  showMenu: boolean;
+};
 
+type ShowMenuAction = {
+  type: string;
+  payload: boolean;
+};
+function reducer(state: ShowMenuState, action: ShowMenuAction) {
+  switch (action.type) {
+    case "showMenu":
+      return { showMenu: !state.showMenu };
+    default:
+      return state;
+  }
+}
 const defaultProps = {
   children: <div>Navbar Components</div>,
 };
 function Navbar(propsIn: Props) {
   const props = { ...defaultProps, ...propsIn };
-  const [toggleNavbar, setToggleNavbar] = useState(false);
-  const handdleToggleNavbar = () => {
-    setToggleNavbar(!toggleNavbar);
-  };
+  const [state, dispatch] = useReducer(reducer, initialState);
+  console.log(state.showMenu);
   const [darkMode, setDarkMode] = useState(true);
   const handleDarkMode = () => {
     setDarkMode(!darkMode);
@@ -65,10 +79,13 @@ function Navbar(propsIn: Props) {
             className={`h-6 w-6 ${darkMode ? "block" : "hidden"} `}
             onClick={handleDarkMode}
           />
-          <IoOptionsSharp className="h-6 w-6" onClick={handdleToggleNavbar} />
+          <IoOptionsSharp
+            className="h-6 w-6"
+            onClick={() => dispatch({ type: "showMenu", payload: true })}
+          />
         </div>
       </div>
-      <div className={`${toggleNavbar ? "block" : "hidden"} w-full py-4`}>
+      <div className={`${state.showMenu ? "block" : "hidden"} w-full py-4`}>
         <ul className="w-full space-y-4">
           {data.map((data) => (
             <li key={data._id} className="p-1 font-normal">
@@ -80,7 +97,11 @@ function Navbar(propsIn: Props) {
                     : "text-light-secondary dark:text-light-secondary"
                 }
               >
-                <span onClick={handdleToggleNavbar}>{data.link}</span>
+                <span
+                  onClick={() => dispatch({ type: "showMenu", payload: true })}
+                >
+                  {data.link}
+                </span>
               </NavLink>
             </li>
           ))}
