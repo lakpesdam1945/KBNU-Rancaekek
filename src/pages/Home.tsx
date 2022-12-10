@@ -5,8 +5,6 @@ import { AppContext } from "../context/AppContext";
 
 function Home() {
   const appContext = useContext(AppContext);
-  console.log(appContext?.userdata);
-
   return (
     <>
       <div className="flex w-full  flex-col items-start justify-between gap-4">
