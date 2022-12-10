@@ -1,26 +1,30 @@
-import { useContext } from "react";
-import { AppContext } from "../context/AppContext";
-
 // type Props = {};
 
+import CardKeislaman from "../components/Card/CardKeislaman";
+import Carousel from "../components/Carousel/Carousel";
+import SepatorContent from "../components/SepartorsContent/SepatorContent";
+
 function Home() {
-  const appContext = useContext(AppContext);
   return (
     <>
-      <div className="flex w-full  flex-col items-start justify-between gap-4">
-        {appContext?.userdata?.map((index, a) => index.author)}
-        {/* {appContext?.loading ? (
-          <span>Loading</span>
-        ) : (
-          appContext?.userdata?.map((item, index) => (
-            <span
-              className="p-4 bg-light-accent dark:bg-dark-secondary rounded-md w-full text-sm lowercase"
-              key={index}
-            >
-              {item.name}
-            </span>
-          ))
-        )} */}
+      <div className="flex w-full flex-col items-start">
+        <Carousel />
+        <SepatorContent name="Keislaman" link="/keislaman" />
+        <div className="snap-proximity  snap-x flex overflow-x-scroll overflow-auto w-full h-56 gap-4">
+          <CardKeislaman />
+          <CardKeislaman />
+          <CardKeislaman />
+          <CardKeislaman />
+          <CardKeislaman />
+        </div>
+        <SepatorContent name="Keislaman" link="/keislaman" />
+        <div className="snap-proximity  snap-x flex overflow-x-scroll overflow-auto w-full h-56 gap-4">
+          <CardKeislaman />
+          <CardKeislaman />
+          <CardKeislaman />
+          <CardKeislaman />
+          <CardKeislaman />
+        </div>
       </div>
     </>
   );

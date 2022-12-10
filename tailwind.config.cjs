@@ -1,7 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   darkMode: "class",
-  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+    "./node_modules/tw-elements/dist/js/**/*.js",
+  ],
   theme: {
     extend: {
       fontFamily: {
@@ -25,11 +29,12 @@ module.exports = {
           primary: "#F9FAFB",
           secondary: "#475569",
           accent: "#D4D4D4",
+          card: "#E2E8F0",
           "primary-text": "#111827",
           "secondary-text": "#64748B",
         },
       },
     },
   },
-  plugins: [],
+  plugins: [require("tw-elements/dist/plugin")],
 };
