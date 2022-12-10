@@ -10,8 +10,13 @@ type Person = {
   data: string;
 };
 
+type Person2<Person> = {
+  name: string;
+  author: string;
+};
+
 type PersonContextType = {
-  userdata: Person[] | null;
+  userdata: Person[] | Person2<Person>[] | null;
   loading: boolean | null;
 };
 
@@ -24,7 +29,9 @@ export const AppContext = createContext<PersonContextType | null>(null);
 export const AppContextProvider = ({
   children,
 }: PersonContextProviderProps) => {
-  const [userdata, setUser] = useState<Person[] | null>([]);
+  const [userdata, setUser] = useState<Person[] | Person2<Person>[] | null>(
+    null
+  );
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {

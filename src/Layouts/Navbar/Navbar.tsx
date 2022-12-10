@@ -58,7 +58,6 @@ const defaultProps = {
 function Navbar(propsIn: Props) {
   const props = { ...defaultProps, ...propsIn };
   const [state, dispatch] = useReducer(reducer, initialState);
-  console.log(state.showMenu);
   const [darkMode, setDarkMode] = useState(true);
   const handleDarkMode = () => {
     setDarkMode(!darkMode);

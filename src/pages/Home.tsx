@@ -5,11 +5,13 @@ import { AppContext } from "../context/AppContext";
 
 function Home() {
   const appContext = useContext(AppContext);
+  console.log(appContext?.userdata);
 
   return (
     <>
       <div className="flex w-full  flex-col items-start justify-between gap-4">
-        {appContext?.loading ? (
+        {appContext?.userdata?.map((index, a) => index.author)}
+        {/* {appContext?.loading ? (
           <span>Loading</span>
         ) : (
           appContext?.userdata?.map((item, index) => (
@@ -17,10 +19,10 @@ function Home() {
               className="p-4 bg-light-accent dark:bg-dark-secondary rounded-md w-full text-sm lowercase"
               key={index}
             >
-              {item.title}
+              {item.name}
             </span>
           ))
-        )}
+        )} */}
       </div>
     </>
   );
