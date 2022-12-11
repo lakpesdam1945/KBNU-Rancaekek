@@ -2,7 +2,7 @@ type Props = {};
 
 function CardKeislaman({}: Props) {
   return (
-    <div className="flex flex-col overflow-hidden relative rounded-md w-52 bg-slate-200 flex-shrink-0 snap-center">
+    <div className="flex flex-col overflow-hidden relative rounded-md w-52 flex-shrink-0 snap-center">
       <img
         src="https://images.unsplash.com/photo-1580418827493-f2b22c0a76cb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8aXNsYW18ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
         alt="image"

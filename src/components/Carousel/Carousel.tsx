@@ -7,7 +7,7 @@ const Carousel = () => {
       className="carousel slide carousel-fade relative"
       data-bs-ride="carousel"
     >
-      <div className="carousel-indicators absolute right-0 bottom-0 left-0 flex justify-center p-0 mb-4">
+      <div className="carousel-indicators absolute right-0 -bottom-4 left-0 flex justify-center p-0 mb-4">
         <button
           type="button"
           data-bs-target="#carouselCaptions"
@@ -36,7 +36,7 @@ const Carousel = () => {
             className="block w-full"
             alt="..."
           />
-          <div className="carousel-caption block absolute text-center">
+          <div className="carousel-caption pb-0 block absolute text-center">
             <h5 className="text-sm">First slide label</h5>
           </div>
         </div>
@@ -46,7 +46,7 @@ const Carousel = () => {
             className="block w-full"
             alt="..."
           />
-          <div className="carousel-caption block absolute text-center">
+          <div className="carousel-caption pb-0 block absolute text-center">
             <h5 className="text-sm">Second slide label</h5>
           </div>
         </div>
@@ -56,7 +56,7 @@ const Carousel = () => {
             className="block w-full"
             alt="..."
           />
-          <div className="carousel-caption block absolute text-center">
+          <div className="carousel-caption pb-0 block absolute text-center">
             <h5 className="text-sm">Third slide label</h5>
           </div>
         </div>
