@@ -11,7 +11,7 @@ function Ads(propsIn: Props) {
           className="w-full h-full object-cover"
         />
         <div className="absolute w-full h-full flex flex-col gap-4 items-center justify-center">
-          <h3 className="text-center text-light-primary text-[10px] px-4 leading-relaxed font-semibold">
+          <h3 className="text-center text-light-primary text-[10px] md:text-base px-4 leading-relaxed font-semibold">
             "Bagus-bagusnya orang itu ialah orang yang bertaqwa, yaitu tidak mau
             melakukan dosa, baik dosa kecil maupun besar semuanya ditinggal."
           </h3>
