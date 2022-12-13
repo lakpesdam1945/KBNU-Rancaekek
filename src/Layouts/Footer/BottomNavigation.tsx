@@ -33,7 +33,7 @@ function BottomNavigation({}: Props) {
         <IoSearchSharp className="h-6 w-6" />
       </NavLink>
       <NavLink
-        to="/post"
+        to="/books"
         className={({ isActive }) =>
           isActive
             ? "text-dark-primary dark:text-light-primary"

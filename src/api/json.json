@@ -1,0 +1,23 @@
+[
+  {
+    "post": [
+      {
+        "_id": 1,
+        "title": "tes title",
+        "body": "test body"
+      },
+      {
+        "_id": 2,
+        "title": "tes title 2",
+        "body": "test body"
+      }
+    ],
+    "category": [
+      {
+        "_id": 1,
+        "title": "tes category",
+        "body": "test body"
+      }
+    ]
+  }
+]
